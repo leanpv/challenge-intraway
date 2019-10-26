@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+    th,
+    td {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 520px) and (max-width: 767px) {
+    th,
+    td {
+        font-size: 15px;
+    }
+}
+
+.container-fluid {
+    padding-top: 80px
+}

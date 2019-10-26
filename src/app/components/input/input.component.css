@@ -1,0 +1,9 @@
+.container-fluid {
+    height: 100%;
+    padding-top: 80px;
+}
+
+.form-control {
+    border: 2px solid;
+    border-color: grey !important;
+}
