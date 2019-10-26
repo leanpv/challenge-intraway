@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="row justify-content-center p-2">
+                <div class="input-group col-12 col-md-7 py-4 px-0">
+                    <input type="text" [value]="" placeholder="Envía un mensaje al comp output" (keyup)="getInputValue()" (keyup.enter)="sendData()" (change)="getInputValue($event)" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="alert alert-warning col-12 col-md-7" role="alert" *ngIf="!this.dataServ.inputFill">Escribe un mensaje!</div>
+                <button type="button" (click)="sendData()" class="btn btn-secondary col-12 col-md-7 m-2">Envíar</button>
+            </div>
+        </div>
+    </div>
+</div>

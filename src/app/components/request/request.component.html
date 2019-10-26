@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="row justify-content-center p-2">
+                <div class="input-group col-12 col-md-7 py-4 px-0">
+                    <input type="text" (keyup.enter)="getInputValue()" placeholder="busca dentro de los titulos" #inputData class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <div class="input-group-append">
+                        <button (click)="getInputValue()" class="btn btn-outline-secondary" type="button">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <table class="table col-12 col-md-7">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">POST TITLE</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of data | filter: search: 'title'">
+                <tr>
+                    <th scope="row">{{ item.id}}</th>
+                    <td>{{ item.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
